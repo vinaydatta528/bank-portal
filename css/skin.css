@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {	
+		}
+.head-design{
+	background-color:#15397f;
+}
+.logo-text{
+	font-size:30px;
+	color:#FFF;
+	font-weight:bold;
+	font-style:normal;
+}
+.logo-text a:hover {
+	color:#DFDFDF;
+}
+.menu-list a{
+	font-size:16px;
+	color:#FFF;
+	font-weight:bold;
+	font-style:normal;
+}
+.menu-list a:hover{
+		color:#DFDFDF;
+}
+.login-form{
+		background-color:#FFFFFF;
+}
+.register-body{
+	background-color:#f5f5f5;
+}
+@media (max-width:600px) {
+	.login-form{
+		border: 1px solid #1d72cf;
+}
+}

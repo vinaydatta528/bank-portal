@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Future Payment</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="account-summary.html">Account Summary</a>
+      <a href="#">Express Pay</a>
+      <a href="#">Future Payment</a>
+      <a href="#">Statements</a>
+      <a href="#">Transaction History</a>
+      <a href="documents-page.html">Documents</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<header class="container-fluid header-menu-des">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        </div>
+      </div>
+    </div>
+	</header>
+<div class="wrapper">
+   <nav class="sidebar">
+      <section class="main-menu-ac">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="logo-text"><img src="images/logo-cg.png"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a href="account-summary.html"><img src="images/account_summary.png">
+                                    Account Summary</a>
+                                </div>
+                        </div>
+                        
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a><img src="images/express_pay.png">Express Pay</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details page-active">
+                                    <a><img src="images/Future_payment.png">Future Payment</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/statements.png">Statements</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a><img src="images/transactio_history.png">Transaction History</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a href="documents-page.html"><img src="images/documents.png">Documents</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a> <img src="images/profile.png">Profile</a>
+                                    
+                                </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="row" style="display: contents;">
+                        	<div class="logout-det">
+                                <div class="col-md-12 menu-details-normal-log">
+                                    <a href="#"><img src="images/logout.png">Logout</a>
+                                </div>
+                             </div>   
+                        </div>
+                </section>
+	</nav>
+
+ <div class="container-fluid content">    
+  	<div class="row">
+        <div class="col-sm-12">
+                <div class="row">
+                   <div class="col-md-12">
+                            <div class="account-text">Account# : 0011223345</div>
+                   </div>
+                </div>
+                <div class="row m-b-22">
+                   <div class="col-md-12">
+                   			<div class="acc-summ">
+                        		<div class="recent-text">Future Payment Activity
+                                	
+								</div>
+                            </div>
+							<div class="table-responsive statment-table">
+                                <table class="table" style="text-align:center;">
+                                  <thead>
+                                    <tr>
+                                      <th>Payment Date</th>
+                                      <th>Amount</th>
+                                      <th>Reference #</th>
+                                      <th>Status</th>
+                                      <th>By</th>
+                                      <th style="border-right:none !important;">Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="m-t-12 m-b-12">
+                                      <td>10/15/2018</td>
+                                      <td>$119.99</td>
+                                      <td>2255689</td>
+                                      <td>Scheduled</td>
+                                      <td>Self</td>
+                                      <td><a href="#">Delete</a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="table-mobile-view">
+                              	<div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Statements</span>
+                                      	<span>View Statement</span>
+                                      	<span>Viewed</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>08/30-09/30</span>
+                                      <span><a href="#"><img src="images/pdf.png">PDF</a></span>
+                                      <span>Yes</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+								<div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Statements</span>
+                                      	<span>View Statement</span>
+                                      	<span>Viewed</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>08/30-09/30</span>
+                                      <span><a href="#"><img src="images/pdf.png">PDF</a></span>
+                                      <span>Yes</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+								<div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Statements</span>
+                                      	<span>View Statement</span>
+                                      	<span>Viewed</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>08/30-09/30</span>
+                                      <span><a href="#"><img src="images/pdf.png">PDF</a></span>
+                                      <span>Yes</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+								<div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Statements</span>
+                                      	<span>View Statement</span>
+                                      	<span>Viewed</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>08/30-09/30</span>
+                                      <span><a href="#"><img src="images/pdf.png">PDF</a></span>
+                                      <span>Yes</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+                              </div>
+
+				</div>
+			</div>
+
+       	</div>
+      </div>
+ 	</div>
+ </div>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

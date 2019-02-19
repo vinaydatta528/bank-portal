@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Profile</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="account-summary.html">Account Summary</a>
+      <a href="#">Express Pay</a>
+      <a href="#">Future Payment</a>
+      <a href="#">Statements</a>
+      <a href="#">Transaction History</a>
+      <a href="documents-page.html">Documents</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<header class="container-fluid header-menu-des">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        </div>
+      </div>
+    </div>
+	</header>
+<div class="wrapper">
+   <nav class="sidebar">
+      <section class="main-menu-ac">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="logo-text"><img src="images/logo-cg.png"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a href="account-summary.html"><img src="images/account_summary.png">
+                                    Account Summary</a>
+                                </div>
+                        </div>
+                        
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a><img src="images/express_pay.png">Express Pay</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/Future_payment.png">Future Payment</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/statements.png">Statements</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a><img src="images/transactio_history.png">Transaction History</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a href="documents-page.html"><img src="images/documents.png">Documents</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details page-active">
+                                   <a> <img src="images/profile.png">Profile</a>
+                                    
+                                </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="row" style="display: contents;">
+                        	<div class="logout-det">
+                                <div class="col-md-12 menu-details-normal-log">
+                                    <a href="#"><img src="images/logout.png">Logout</a>
+                                </div>
+                             </div>   
+                        </div>
+                </section>
+	</nav>
+
+ <div class="container-fluid content">   
+  	<div class="row rowmix">
+    	
+        <div class="col-sm-12 profile-head">Profile Management
+        </div>
+        <form class="row m-l-0 profile-fields">
+        		<div class="col-sm-12 p-l-10 p-r-8">
+                	<div class="info-change">Any Information want to be changed here please call CSR</div>
+                </div>
+    			<div class="col-sm-3 p-l-10 p-r-8">
+             		<div class="profile-group input-group">
+                            <label for="username" class="col-form-label text-left w-full">User Name:</label>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="username" alt="username" value="aba@xyz.com" placeholder="Choose a User Name" readonly="" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-3  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="fname" class="col-form-label text-left w-full">First Name:</label>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="fname" alt="First Name" value="Abc" placeholder="First Name" readonly="" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-3  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="lname" class="col-form-label text-left w-full">Last Name:</label>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="lname" alt="Last Name" value="Xyz" placeholder="Last Name" readonly="" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-3  p-l-10 p-r-8">
+                    	
+                    </div>
+                    <div class="col-sm-5  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="staddone" class="col-form-label text-left w-full">Street Address 1:</label>
+                            <input type="text" class="form-control input-field-profile" name="staddone" alt="Street Address 1"  value="Georgia State Campus," placeholder="Street Address 1" required>
+                        </div>
+                    </div>
+                     <div class="col-sm-5  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="lname" class="col-form-label text-left w-full">Street Address 2:</label>
+                            <input type="text" class="form-control input-field-profile" name="staddone" alt="Street Address 2" value="100 Piedmont Ave SE" placeholder="Street Address 2" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-5  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="city" class="col-form-label text-left w-full">City:</label>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="city" alt="City" value="Atlanta" placeholder="City" required>
+                        </div>
+                    </div>
+                     <div class="col-sm-3  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="state" class="col-form-label text-left w-full">State:</label>
+							
+										<select class="form-control input-field-profile profile-select" name="state">
+										<option value="AL">Alabama</option>
+										<option value="AK">Alaska</option>
+										<option value="AZ">Arizona</option>
+										<option value="AR">Arkansas</option>
+										<option value="CA">California</option>
+										<option value="CO">Colorado</option>
+										<option value="CT">Connecticut</option>
+										<option value="DE">Delaware</option>
+										<option value="DC">District Of Columbia</option>
+										<option value="FL">Florida</option>
+										<option value="GA" selected="selected">Georgia</option>
+										<option value="HI">Hawaii</option>
+										<option value="ID">Idaho</option>
+										<option value="IL">Illinois</option>
+										<option value="IN">Indiana</option>
+										<option value="IA">Iowa</option>
+										<option value="KS">Kansas</option>
+										<option value="KY">Kentucky</option>
+										<option value="LA">Louisiana</option>
+										<option value="ME">Maine</option>
+										<option value="MD">Maryland</option>
+										<option value="MA">Massachusetts</option>
+										<option value="MI">Michigan</option>
+										<option value="MN">Minnesota</option>
+										<option value="MS">Mississippi</option>
+										<option value="MO">Missouri</option>
+										<option value="MT">Montana</option>
+										<option value="NE">Nebraska</option>
+										<option value="NV">Nevada</option>
+										<option value="NH">New Hampshire</option>
+										<option value="NJ">New Jersey</option>
+										<option value="NM">New Mexico</option>
+										<option value="NY">New York</option>
+										<option value="NC">North Carolina</option>
+										<option value="ND">North Dakota</option>
+										<option value="OH">Ohio</option>
+										<option value="OK">Oklahoma</option>
+										<option value="OR">Oregon</option>
+										<option value="PA">Pennsylvania</option>
+										<option value="RI">Rhode Island</option>
+										<option value="SC">South Carolina</option>
+										<option value="SD">South Dakota</option>
+										<option value="TN">Tennessee</option>
+										<option value="TX">Texas</option>
+										<option value="UT">Utah</option>
+										<option value="VT">Vermont</option>
+										<option value="VA">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="WV">West Virginia</option>
+										<option value="WI">Wisconsin</option>
+										<option value="WY">Wyoming</option>
+									</select>			
+                         <!--   <input type="text" class="form-control input-field-profile alphabetsonly" name="state" alt="State" value="GA" placeholder="State" required> -->
+                        </div>
+                    </div>
+                     <div class="col-sm-2  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="zip" class="col-form-label text-left w-full">ZIP:</label>
+                            <input type="text" class="form-control input-field-profile numbersonly" name="zip" alt="ZIP" value="85485" maxlength="5" placeholder="XXXXX" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-5  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="zip" class="col-form-label text-left w-full">Email Address:</label>
+                            <input type="email" class="form-control input-field-profile" name="email" alt="email" value="abc@gmail.com" placeholder="Email" required>
+                        </div>
+                    </div>
+                     <div class="col-sm-6 p-l-10 p-r-8">
+                    	<div class="email-change">By changing Email Address your username will be changed to your updated Email Address. Email notifications will be sent to this email if turned on.</div>
+                    </div>
+                    <div class="col-sm-3  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="mobilephone" class="col-form-label text-left w-full phonelabel">Mobile Phone #(Text notifications):</label>
+                            <input type="text" class="form-control input-field-profile phoneval" maxlength="13" name="mobilephone" alt="Mobile phone" value="(777)888-9999" placeholder="Mobile Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-3  p-l-10 p-r-8">
+                    	<div class="profile-group input-group">
+                            <label for="homephone" class="col-form-label  text-left w-full phonelabel">Home Phone #:</label>
+                            <input type="text" class="form-control input-field-profile phoneval"  maxlength="13" name="homephone" alt="Home phone" value="(778)666-9999" placeholder="Home Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 p-l-10 p-r-8">
+                    		<div class="terms-cond">Please read <a href="#">Terms & Conditions.</a></div>
+                    </div>
+                    <div class=" offset-8">
+                    
+                    </div>
+                    <div class="col-sm-2">
+                    	<div class="profile-group input-group">
+                        	<input type="submit" value="CANCEL" class="profile-cancel-btn">
+                        </div>
+                    </div>
+                     <div class="col-sm-2 ">
+                    	<div class="profile-group input-group">
+                           <input type="submit" value="SAVE" class="profile-save-btn">
+                        </div>
+                    </div>
+          	</form>
+      </div>
+ 	</div>
+ </div>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

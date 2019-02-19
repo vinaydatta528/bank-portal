@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Account Summary</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="account-summary.html">Account Summary</a>
+      <a href="#">Express Pay</a>
+      <a href="#">Future Payment</a>
+      <a href="#">Statements</a>
+      <a href="transaction-history.html">Transaction History</a>
+      <a href="documents-page.html">Documents</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<header class="container-fluid header-menu-des">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        </div>
+      </div>
+    </div>
+	</header>
+<div class="wrapper">
+   <nav class="sidebar">
+      <section class="main-menu-ac">
+                        <div class="row">
+                            <div class="col-md-12">
+                               <div class="logo-text"><img src="images/logo-cg.png"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="background-color:#FFF;">
+                                <div class="col-md-12 menu-details">
+                                    <a href="account-summary.html"><img src="images/account_summary.png">
+                                    Account Summary</a>
+                                </div>
+                        </div>
+                        
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a><img src="images/express_pay.png">Express Pay</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/Future_payment.png">Future Payment</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/statements.png">Statements</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a href="transaction-history.html"><img src="images/transactio_history.png">Transaction History</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-md-12 menu-details-normal">
+                                 <a href="documents-page.html"><img src="images/documents.png">Documents</a>
+                             </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a> <img src="images/profile.png">Profile</a>
+                                    
+                                </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="row" style="display: contents;">
+                        	<div class="logout-det">
+                                <div class="col-md-12 menu-details-normal-log">
+                                    <a href="#"><img src="images/logout.png">Logout</a>
+                                </div>
+                             </div>   
+                        </div>
+           </section>
+	</nav>
+
+ <div class="container-fluid content">    
+  	<div class="row">
+        <div class="col-sm-12">
+                <div class="row">
+                   <div class="col-md-12">
+                            <div class="account-text">Account# : 0011223345</div>
+                   </div>
+                </div>
+                <div class="row flex-column-reverse flex-md-row">
+                   <div class="col-md-6">
+                   		<div class="acc-summ">
+                        	<div class="as-header">
+                            	<div class="acc-text">Account Summary</div>
+                                <input type="button" value="MAKE A PAYMENT" class="acc-submit">
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div class="acc-body">
+                            	<div class="body-margin">
+                                	<div class="left-marign">
+                                    	<div class="acc-bold-text">$25,580.00</div>
+                                        <div class="acc-nor-text">Current Balance</div>
+                                    </div>
+                               		<div class="right-margin">
+                                    	<div class="acc-bold-text">10/23/2018</div>
+                                        <div class="acc-nor-text">Next Payment Due Date</div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                            	 </div>
+                        	</div>
+                            <div class="acc-body">
+                            	<div class="body-margin">
+                                	<div class="left-marign">
+                                    	<div class="acc-bold-text">$13,548.00</div>
+                                        <div class="acc-nor-text">Available Credit</div>
+                                    </div>
+                               		<div class="right-margin">
+                                    	<div class="acc-bold-text">$4,300.00</div>
+                                        <div class="acc-nor-text">Minimum Payment Due</div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                            	 </div>
+                        	</div>
+                          
+                            <div class="collapse" id="collapseExample">
+                              <div class="acc-body">
+                            	<div class="body-margin">
+                                	<div class="left-marign">
+                                    	<div class="acc-bold-text">09/30/2018</div>
+                                        <div class="acc-nor-text">Last Statement Date</div>
+                                    </div>
+                               		<div class="right-margin">
+                                    	<div class="acc-bold-text">10/30/2018</div>
+                                        <div class="acc-nor-text">Next Statement Date</div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                            	 </div>
+                        	</div>
+                             <div class="acc-body">
+                            	<div class="body-margin">
+                                	<div class="left-marign">
+                                    	<div class="acc-bold-text">$190.09</div>
+                                        <div class="acc-nor-text">Last Payment Amount</div>
+                                    </div>
+                               		<div class="right-margin">
+                                    	<div class="acc-bold-text">10/04/2018</div>
+                                        <div class="acc-nor-text">Last Payment Date</div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                            	 </div>
+                        	</div>
+                             
+                            <div class="acc-body">
+                            	<div class="body-margin">
+                                	<div class="left-marign">
+                                    	<div class="acc-bold-text">$8,000.00</div>
+                                        <div class="acc-nor-text">Credit Limit</div>
+                                    </div>
+                               		
+                                    <div style="clear:both;"></div>
+                            	 </div>
+                        	</div>
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-12">
+                                	<div class="see-more"><a id="seemore" data-toggle="collapse" href="#collapseExample">See more</a></div>
+                            	</div>
+                            </div>
+                        </div>
+                        
+                   </div>
+                   <div class="col-md-6">
+                   		<div class="row">
+                             <div class="col-md-12">
+                             	<div class="alert alert-success profiles-text"> 
+									<strong><img src="images/welcome_icon.png" class="p-r-12">Welcome Pankaj,</strong> <br>
+                                    <p class="p-l-34">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                                    industry's standard dummy text ever since the 1500s.</p>
+								</div>
+                             </div>
+                             <div class="col-md-12">
+                            	<div class="alert alert-danger  profiles-text-s"> 
+									
+									<img src="images/bad_account.png" class="p-r-12" >Bad account standing status <br>
+                                    <p class="p-l-36">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+								</div>
+                             </div>
+                         </div>    
+                   </div>
+                </div>
+ 				<div class="row m-t-20 m-b-22">
+                   <div class="col-md-12">
+                   		<div class="acc-summ">
+                        	<div class="recent-text">Recent Transactions</div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>Date</th>
+                                      <th>Reference #</th>
+                                      <th>Description</th>
+                                      <th>Amount</th>
+                                      <th style="border-right:none !important;">By</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>10/04/2018</td>
+                                      <td>0011223345</td>
+                                      <td>Payment Posted</td>
+                                      <td>$192.78</td>
+                                      <td>Autopay</td>
+                                    </tr>
+                                     <tr>
+                                      <td>10/04/2018</td>
+                                      <td>0011223345</td>
+                                      <td>Payment Posted</td>
+                                      <td>$192.78</td>
+                                      <td>Autopay</td>
+                                  
+                                    </tr>
+                                     <tr>
+                                      <td>10/04/2018</td>
+                                      <td>0011223345</td>
+                                      <td>Payment Posted</td>
+                                      <td>$192.78</td>
+                                      <td>Autopay</td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="table-mobile-view">
+                              	<div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Reference #</span>
+                                      	<span>Description</span>
+                                      	<span>Amount</span>
+                                      	<span>By</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>0011223345</span>
+                                      <span>Payment Posted</span>
+                                      <span>$192.78</span>
+                                      <span>Autopay</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+                                
+                                <div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Reference #</span>
+                                      	<span>Description</span>
+                                      	<span>Amount</span>
+                                      	<span>By</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>0011223345</span>
+                                      <span>Payment Posted</span>
+                                      <span>$192.78</span>
+                                      <span>Autopay</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+                                
+                                <div class="table-row"> 
+                                	<div class="table-head">
+                                		<span>Date</span>
+                                      	<span>Reference #</span>
+                                      	<span>Description</span>
+                                      	<span>Amount</span>
+                                      	<span>By</span>
+                                     </div>
+                                 	<div class="table-data">
+                                      <span>10/04/2018</span>
+                                      <span>0011223345</span>
+                                      <span>Payment Posted</span>
+                                      <span>$192.78</span>
+                                      <span>Autopay</span>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                              	</div>
+                                
+                                
+                              </div>
+                        </div>
+                   </div>
+                </div>
+       	</div>
+      </div>
+ 	</div>
+ </div>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

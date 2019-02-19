@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Express Pay</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="account-summary.html">Account Summary</a>
+      <a href="#">Express Pay</a>
+      <a href="#">Future Payment</a>
+      <a href="#">Statements</a>
+      <a href="transaction-history.html">Transaction History</a>
+      <a href="documents-page.html">Documents</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<header class="container-fluid header-menu-des">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        </div>
+      </div>
+    </div>
+	</header>
+<div class="wrapper">
+   <nav class="sidebar">
+      <section class="main-menu-ac">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="logo-text"><img src="images/logo-cg.png"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a href="account-summary.html"><img src="images/account_summary.png">
+                                    Account Summary</a>
+                                </div>
+                        </div>
+                        
+                        <div class="row">
+                                <div class="col-md-12 menu-details page-active">
+                                     <a><img src="images/express_pay.png">Express Pay</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/Future_payment.png">Future Payment</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a><img src="images/statements.png">Statements</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                     <a href="transaction-history.html"><img src="images/transactio_history.png">Transaction History</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                    <a href="documents-page.html"><img src="images/documents.png">Documents</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 menu-details-normal">
+                                   <a> <img src="images/profile.png">Profile</a>
+                                    
+                                </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="row" style="display: contents;">
+                        	<div class="logout-det">
+                                <div class="col-md-12 menu-details-normal-log">
+                                    <a href="#"><img src="images/logout.png">Logout</a>
+                                </div>
+                             </div>   
+                        </div>
+          </section>
+	</nav>
+
+ <div class="container-fluid content">    
+  	<div class="row">
+        <div class="col-sm-12">
+                <div class="row">
+                   <div class="col-md-12">
+                            <div class="account-text">Account# : 0011223345</div>
+                   </div>
+                </div>
+                
+                <div class="row m-t-38">
+                   <div class="col-md-12">
+                   		<div class="acc-doc m-t-8 m-b-20">
+    						<div class="doc-text">Payment Details
+                            </div>
+                            <div style="clear:both;"></div>
+                            <div class="doc-box-field">
+                            	
+                            	<form id="expForm" name="expressPay" method="post" action="#" class="row m-l-0 profile-fields">
+                                	<div class="col-sm-12 profile-group-edit m-l-18 m-t-18">Account Details</div>
+                                    
+                            		<div class="col-sm-4 p-l-18 p-t-8">
+                                        <div class="input-group">
+                                            <label for="username" class="col-form-label exp-text w-full">Minimum Payment Due</label>
+                                            <div class="prof-text-fld ptf">$210.34</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4  p-l-18 p-t-8">
+                                        <div class="input-group">
+                                            <label for="fname" class="col-form-label exp-text w-full">Minimum Payment Due Date</label>
+                                            <div class="prof-text-fld ptf">10/12/2018</div>
+                                           </div>
+                                    </div>
+                                    <div class="col-sm-4  p-l-18 p-t-8">
+                                        <div class="input-group">
+                                            <label for="lname" class="col-form-label exp-text w-full">Current Outstanding Balance</label>
+                                            <div class="prof-text-fld ptf">$119.99</div>
+                                         </div>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <!--Error Message-->
+                                    <div class="alert error-message alert-danger">
+                                        <div class="error-icon"><img src="images/bad_account.png"></div> 
+                                        <strong>Invalid username and password!</strong> 
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                    <!--Error Message-->
+                   					<div class="col-sm-5 p-l-18 ">
+                                        <div class="profile-group input-group">
+                            				<label for="state" class="col-form-label express-label text-left w-full">From</label>
+											<select class="form-control input-field-profile profile-drop" name="From" required>
+												<option value="">Checking ****9454</option>
+												<option value="">Checking ****3564</option>
+												<option value="">Checking ****1027</option>
+											</select>			
+                         				</div>
+                                    </div>
+                                    <div class="offset-5"></div>
+                                    <div class="col-sm-5 p-l-18 p-t-8">
+                                        <div class="profile-group input-group">
+                                            <label for="dateon" class="col-form-label express-label text-left w-full">Date</label>
+                                            <input type="text" id="datepick" class="form-control input-field-profile profile-date" name="dateon" alt="" value="" placeholder="MM/DD/YYYY" required readonly>
+                                        </div>
+                                    </div>
+                                    <div class="offset-5"></div>
+                                    <div class="col-sm-5 p-l-18 p-t-8">
+                                        <div class="profile-group input-group">
+                            				<label for="state" class="col-form-label express-label text-left w-full">Amount</label>
+											<select class="form-control input-field-profile profile-drop" name="browser" onchange="if(this.options[this.selectedIndex].value=='customOption'){
+                                                                                                                          toggleField(this,this.nextSibling);
+                                                                                                                          this.selectedIndex='0';
+                                                                                                                     }">
+                                                <option value="">Please choose</option>                                                                     
+            									<option value="">Min Due - $119.99</option>
+												<option value="">Current Balance</option>
+												<option  value="customOption">Other Amount</option>
+        									</select><input name="browser"  class="form-control input-field-profile numbersonly profile-drop" style="display:none;" disabled="disabled" onclick="if(this.value==''){toggleField(this,this.previousSibling);}">
+                         				</div>
+                                    </div>
+                                    
+                                    <div class="offset-11"></div>
+                                    <div class="col-sm-2 offset-3  p-t-8">
+                                        <div class="profile-group input-group">
+                                           <input type="submit" value="PAY" class="profile-save-btn">
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="col-md-12">
+                                        <div class="alert-border profiles-error">
+                                                <img src="images/welcome_icon.png">
+                                                <p>Please <a href="#">click here</a> or on Future Payment Activity tab to view any future payments.</p>
+                                         </div>
+                                   </div>
+                                   
+                            	</form>
+                            </div>
+						</div>
+                   </div>
+                </div>
+       		</div>
+      	</div>
+ 	</div>
+ </div>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#datepick" ).datepicker();
+  } );
+</script>
+</body>
+</html>

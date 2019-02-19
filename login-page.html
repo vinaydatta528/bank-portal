@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Login</title>
+<!-- Stylesheets -->
+  	<link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/util.css">
+  	<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+	<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+   <script src="js/angular.min.js"></script>  
+  <script type="text/javascript">
+   var myApp = angular.module("myApp", []);
+   myApp.controller("maincntrl", function ($scope) {
+  
+   });
+  </script>
+</head>
+
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="#">About</a>
+      <a href="#">News</a>
+      <a href="#">Contact Us</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<!-- Header -->
+<header class="container-fluid head-design">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        	<nav class="menu-list">
+            	<a href="#">About</a>
+                <a href="#">News</a>
+                <a href="#">Contact Us</a>
+            </nav>
+           
+        </div>
+      </div>
+    </div>
+</header>
+<body ng-app="myApp">
+<div class="banner-background">
+<section>
+<div class="container-fluid" ng-controller="maincntrl">
+	<div class="row">
+    	<div class="col-12 col-sm-12">
+        	<div class="form-load">
+        	<form action="" id="login_form" name="login_form" method="post" class="login-form form-group row">
+            	<h1 class="welcome-text">Welcome to Bank name</h1>
+                <div style="clear:both;"></div>
+                <div class="signin-text">Sign Into Your Account</div>
+                <!--Error Message-->
+                <div class="alert error-message alert-danger">
+                	<div class="error-icon"><img src="images/bad_account.png"></div> 
+                    <strong>Invalid username and password!</strong> 
+                    <div style="clear:both;"></div>
+                </div>
+                <!--Error Message-->
+                
+                <div class="col-sm-12">
+					   <div class="input-group input-login">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><img src="images/username.png"></span>
+							</div>
+							  <input type="text" class="form-control bankusername" name="username" ng-model="user.firstname" 
+							   placeholder="Username" required />   
+						</div>
+						  <span class="msg angErrmsg" ng-show="login_form.username.$error.dirty && login_form.username.$error.required">
+						   Please enter a valid username</span>
+						
+					</div>
+					<div class="col-sm-12">
+						<div class="input-group input-login">
+							 <div class="input-group-prepend">
+								 <span class="input-group-text"><img src="images/password.png" alt="Password"></span>
+							 </div>
+							  <input type="password" class="form-control bankpassword" ng-model="user.password" name="password" id="lpassword"
+							   placeholder="Enter Password" autocomplete="off" ng-minlength="8" ng-maxlength="20" value="" required /> 
+							   <span class="glyphicon glyphicon-eye-open glyphicon-align-center glyphicon-css lgPassword"></span>
+                        </div>
+						 <span class="msg angErrmsg" ng-show="login_form.password.$dirty && login_form.password.$error.minlength">
+                          Password must contain atleast 8 charecters</span>
+                         <span class="msg angErrmsg" ng-show="login_form.password.$dirty && login_form.password.$error.maxlength">
+                         Password should not exceed 20 Characters</span>
+					</div>
+               
+                <div class="col-sm-12">
+                	<div class="checkbox_wrapper">
+                        <input type="checkbox" /><label>Remember Me</label>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                	<input type="submit" value="SIGN IN" class="sign-in">
+                </div>
+                <div class="col-sm-6">
+                	<div class="register">
+                		<a href="#">Pre-registration </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                	<div class="forget-pwd">
+                    	<a href="#">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+            </div>
+    	</div>
+	</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container-fluid bank-footer">
+	<div class="row">
+    	<div class="col-12 col-sm-12">
+            <nav class="footer-menu-list">
+                <a href="#">FAQs</a>
+                <a href="#">Services</a>
+                <a href="#">Press Center</a>
+                <a href="#">Careers</a>
+                <a href="#">About Us</a>
+                <a href="#">Site Map</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </nav>
+        </div>
+        <div class="col-12 col-sm-12">
+        	<div class="rights-text">BankName 2018. All Rights Reserved.</div>
+        </div>
+    </div>
+</div>
+</footer>
+</div>
+
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+
+</body>
+</html>
