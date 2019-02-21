@@ -1,4 +1,35 @@
-//Express pay 
+//Express Pay in one page for three divis
+ $(document).ready(function(){
+  $(".payment-conf").click(function(){
+   $(this).closest(".paymentdivi").remove();
+	 $(".reviewdivi").show();
+	
+  }); 
+}); 
+  $(document).ready(function(){
+$(".review-conf").click(function(){
+   $(this).closest(".paymentdivi").remove();
+	 $(this).closest(".reviewdivi").remove();
+	 $(".confirmdivi").show();
+	
+  });
+
+$(".close-field").click(function(e){
+   e.preventDefault();
+	
+  });
+$(".print-conf").click(function(e){
+   e.preventDefault();
+	
+  });
+  $(".edit-conf").click(function(e){
+   e.preventDefault();
+	
+  });
+    });
+
+
+//Express pay  Old
 $(document).ready(function () {
 	$('.exp-pay-show').hide();
 	$('#2').show();

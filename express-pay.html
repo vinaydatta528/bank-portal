@@ -119,8 +119,8 @@
                    </div>
                 </div>
                 
-                <div class="row m-t-38">
-                   <div class="col-md-12">
+                <div class="row m-t-38 paymentdivi" >  
+				<div class="col-md-12">
                    		<div class="acc-doc m-t-8 m-b-20">
     						<div class="doc-text">Payment Details
                             </div>
@@ -185,14 +185,14 @@
             									<option value="">Min Due - $119.99</option>
 												<option value="">Current Balance</option>
 												<option  value="customOption">Other Amount</option>
-        									</select><input name="browser"  class="form-control input-field-profile numbersonly profile-drop" style="display:none;" disabled="disabled" onclick="if((this.value=='')||(this.value!=='')){toggleField(this,this.previousSibling);}">
+        									</select><input name="browser"  class="form-control input-field-profile numbersonly profile-drop" style="display:none;" disabled="disabled" onclick="if((this.value=='')||(this.value!=='')){toggleField(this,this.previousSibling);}" >
                          				</div>
                                     </div>
                                     
                                     <div class="offset-11"></div>
                                     <div class="col-sm-2 offset-3  p-t-8">
                                         <div class="profile-group input-group">
-                                           <input type="submit" value="PAY" class="profile-save-btn">
+                                           <input type="submit" value="PAY" class="profile-save-btn payment-conf">
                                         </div>
                                     </div>
                                     
@@ -207,20 +207,133 @@
                             </div>
 						</div>
                    </div>
+				   </div>
+				   <div class="row m-t-38 reviewdivi">
+                   <div class="col-md-12">
+                   		<div class="acc-doc m-t-8 m-b-20">
+    						<div class="doc-text-sm"><span>Payment Details</span>
+                            	<img src="images/express.png">Review & Pay
+                                
+                            </div>
+                            <div style="clear:both;"></div>
+                            <div class="doc-box-field">
+                            	
+                            	<form class="row m-l-0 profile-fields">
+                                	<!--Error Message-->
+                                    <div class="alert error-message alert-danger">
+                                        <div class="error-icon"><img src="images/bad_account.png"></div> 
+                                        <strong>Error message!</strong> 
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                    <!--Error Message-->
+                                     <div class="col-md-5 p-l-18 p-t-12">
+                                        <div class="profile-group input-group">
+                                            <label for="fromcard" class="col-form-label express-label text-left w-full">From</label>
+                                            <input type="text" class="form-control input-field-profile" name="fromcard" alt="" value="Checking ***9454" placeholder="" required="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="offset-5"></div>
+                                    <div class="col-md-5 p-l-18 p-t-8">
+                                        <div class="profile-group input-group">
+                                            <label for="dateon" class="col-form-label express-label text-left w-full">Date</label>
+                                            <input type="text" class="form-control input-field-profile" name="dateon" alt="" value="10/24/2018" placeholder="" required="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="offset-5"></div>
+                                     <div class="col-md-5 p-l-18 p-t-8 p-b-12">
+                                        <div class="profile-group input-group">
+                                            <label for="amount" class="col-form-label express-label text-left w-full">Amount</label>
+                                            <input type="text" class="form-control input-field-profile" name="amount" alt="" value="$199.99" placeholder="" required="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="offset-6"></div>
+                                    <div class="col-12 col-md-2 offset-md-1 p-t-8">
+                                        <div class="profile-group input-group">
+                                            <input type="submit" value="EDIT" class="profile-cancel-btn review-font edit-conf">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 p-t-8">
+                                        <div class="profile-group input-group">
+                                           <input type="submit" value="PAY $199.99" class="profile-save-btn review-font review-conf">
+                                        </div>
+                                    </div>
+                                    
+                                     
+                            	</form>
+                            </div>
+						</div>
+                   </div>
                 </div>
+				<div class="row m-t-38 confirmdivi">
+                   <div class="col-md-12">
+                   		<div class="acc-doc m-t-8 m-b-20">
+    						<div class="doc-text-sm exp-none"><span>Payment Details</span>
+                            	<img src="images/express.png"><span>Review & Pay</span>
+                                <img src="images/express.png">Payment Confirmation
+                            </div>
+                            <div style="clear:both;"></div>
+                            <div class="doc-box-field">
+                            	
+                            	<form class="row m-l-0 profile-fields">
+                                
+                                	 <div class="col-sm-12 profile-group-edit m-l-18 m-t-18"><img src="images/exp-tick.png">Success!</div>
+                                     <div class="col-sm-12 payment-text m-l-8 m-t-8">Your payment has been scheduled. Please note the <span>Reference #34876</span> for future communication.</div> 
+                                  	 <div class="col-sm-12 payment-text m-l-8 m-t-8">Notification has been sent to <span>johnsmith@gmail.com</span></div> 
+                                     <div class="border-line p-t-8"></div>
+                                     <div class="col-sm-12 profile-group-edit m-l-18 m-t-6">Payment Summary</div>
+                                     
+                                     <div class="col-sm-6 profile-group-edit m-l-18 m-t-5">
+                                     	<div class="exp-row"> 
+                                            <div class="exp-head">
+                                            	<span>Amount:</span>
+                                                <span>Date:</span>
+                                                <span>From:</span>
+                                            </div>
+                                            <div class="exp-data">
+                                            	<span>$192.78</span>
+                                                <span>10/04/2018</span>
+                                                <span>Checking ***9454</span>
+                                             </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+                                     
+                                     </div>
+                                     <div class="offset-4"></div>
+                                     <div class="col-sm-2 p-t-8">
+                                        <div class="profile-group input-group">
+                                           <input type="submit" value="PRINT" class="profile-save-btn print-conf">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-2  p-t-8">
+                                        <div class="profile-group input-group">
+                                            <button type="submit" value="" class="profile-cancel-btn close-field">CLOSE</button>
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                     
+                            	</form>
+                            </div>
+						</div>
+                   </div>
+                </div>
+				
+                </div>
+				
        		</div>
       	</div>
  	</div>
- </div>
+
 <script src='js/jquery-3.3.1.slim.min.js'></script>
 <script src='js/bootstrap.min.js'></script>
 <script src='js/custom.js'></script>
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script>
-  $( function() {
-    $( "#datepick" ).datepicker();
-  } );
+  $(function() {
+    $( "#datepick").datepicker();
+  });
 </script>
 </body>
 </html>

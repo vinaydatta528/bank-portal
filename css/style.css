@@ -600,6 +600,9 @@ position: fixed;
 .phonelabel{
 	    height: 62px;
 }
+.paymentdivi{display:block;}
+.reviewdivi{display:none;}
+.confirmdivi{display:none;}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
