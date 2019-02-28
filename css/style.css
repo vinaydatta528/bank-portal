@@ -18,6 +18,11 @@ body {
 	width:1300px;
 	margin:0px auto;
 }
+.profile-box-field {
+	border-radius:2px;
+	border:1px solid #B2B2B2;
+	margin: 0px auto 24px auto;
+}
 .logo-text{
 	padding:22px 0px 20px 18px;
 	width:220px;
@@ -1141,7 +1146,7 @@ color: #737070;
 	font-size:14px;
 	color:#222222;
 	font-weight:normal;
-	padding:0px 0px 22px 0px; 
+	padding: 6px 0px 14px 0px;
 }
 .terms-cond a{
 	color:#1e71cd;
@@ -1155,6 +1160,7 @@ color: #737070;
     -moz-appearance: none;
     -ms-appearance: none;
     outline: none;
+	color:#222222;
     padding: 5px 0px 5px 12px !important;
     height: 42px;
     z-index: 4;
@@ -1170,6 +1176,7 @@ color: #737070;
     outline: none;
     padding: 5px 0px 5px 12px !important;
     height: 42px;
+	color:#222222;
     z-index: 31;
 }
 .profile-date::-webkit-inner-spin-button {
@@ -1415,7 +1422,7 @@ select::-ms-expand {
 .link-active{border-bottom:1px solid #15397f;}
 .page-item:first-child .page-link{border-top-left-radius: 25px;border-bottom-left-radius: 25px;}
 .page-item:last-child .page-link{border-top-right-radius: 25px;border-bottom-right-radius: 25px;}
-.angErrmsg{color:red;margin-left:20px;font-weight:normal;float:left;}
+.angErrmsg{color:red; font-size:13px;font-weight:normal;float:left;}
 .angErrmsg_np{color:red;font-weight:normal;}
 .angErrmsg_tp{color:red;margin-left:40px;font-weight:normal;}
 /*End */
@@ -1746,6 +1753,10 @@ input[type=text]::-webkit-credentials-auto-fill-button {
 .alert-border {
     margin: 19px auto 60px auto;
 }
+.phonelabel {
+    height: 56px;
+	font-size:12px;
+}
 .footer-menu-list-res a {
     font-size: 11px;
 }
@@ -2032,6 +2043,9 @@ width:100%;
     font-size: 11px;}
 .payment-text {
     font-size: 11px;}
+.phonelabel {
+    height: auto;
+}
 .error-message strong { font-size:14px;    width: 84%;}
 }
 @media (max-width:479px) {

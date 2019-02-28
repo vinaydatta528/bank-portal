@@ -1,5 +1,5 @@
 //Express Pay in one page for three divis
- $(document).ready(function(){
+$(document).ready(function(){
   $(".payment-conf").click(function(){
    $(this).closest(".paymentdivi").remove();
 	 $(".reviewdivi").show();
@@ -13,21 +13,32 @@ $(".review-conf").click(function(){
 	 $(".confirmdivi").show();
 	
   });
-
-$(".close-field").click(function(e){
-   e.preventDefault();
-	
-  });
-$(".print-conf").click(function(e){
-   e.preventDefault();
-	
-  });
+$('.close-field').click(function(){
+	 $(".paymentdivi").show();
+}); 
   $(".edit-conf").click(function(e){
-   e.preventDefault();
+	 e.preventDefault();
+   $(".from").focus();
+	$(".from").prop("readonly",false);
+	$(".amount").prop("readonly",false);
+	$(".date").prop("readonly",false);
+	
 	
   });
     });
-
+	
+//Print Function	
+function printdiv(printpage)
+{
+var headstr = "<html><head><title></title></head><body>";
+var footstr = "</body>";
+var newstr = document.all.item(printpage).innerHTML;
+var oldstr = document.body.innerHTML;
+document.body.innerHTML = headstr+newstr+footstr;
+window.print();
+document.body.innerHTML = oldstr;
+return false;
+}
 
 //Express pay  Old
 $(document).ready(function () {
@@ -147,7 +158,13 @@ $(document).ready(function(){
 		$(".panel-aa").toggle();
 	});
 });	
+//Profile Terms and conditions
 
+$(document).ready(function(){
+	$(".terms-cond a").click(function(){
+		$(".panel-ec").toggle();
+	});
+});
 //Responsive menu Bar
 $(document).ready(function(){
 	$(".responsive_icon").click(function(){

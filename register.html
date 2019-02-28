@@ -83,20 +83,21 @@
 						  <span class="glyphicon glyphicon-eye-open gly-choose-pwd"></span>
                       	<input type="password" ng-show="loginCtrl.showTouchID" ng-model="user.userPassword" ng-change="validationInputPwdText(user.userPassword)" 
 						class="form-control input-field-blr choosepassword" id="choosepassword" name="password" placeholder="Choose a Password" required>
-                       
+                       <span class="help-inline" data-ng-show='passwordForm.password.$valid && passwordForm.password.$dirty' data-ng-class="strength" ng-style="checkpwdStrength">
+				 <span ng-bind="message1"></span> </span>
                     </div>
 					
-              	<span class="help-inline" data-ng-show='passwordForm.password.$valid && passwordForm.password.$dirty' data-ng-class="strength" ng-style="checkpwdStrength">
-				 <span ng-bind="message1"></span> </span>
+              	
                    <div class="form-group input-group input-login">
                   		<label for="repeatpassword" class="col-form-label text-left w-full">Repeat Password</label>
                       	<input type="password" class="form-control input-field-blr repeatpassword" ng-model="user.repeatpassword" compare-to="user.userPassword"  id="repeatpassword" name="repeatpassword" placeholder="Repeat Password" required>
                         <span class="glyphicon glyphicon-eye-open gly-repeat-pwd"></span>
-                    </div>
-					 <span class="angerrPwd" ng-show="passwordForm.repeatpassword.$dirty && passwordForm.repeatpassword.$invalid">Repeat Password doesn't match with the chosen password.</span>
+                        <span class="angerrPwd" ng-show="passwordForm.repeatpassword.$dirty && passwordForm.repeatpassword.$invalid">Repeat Password doesn't match with the chosen password.</span>
                 	<div class="pass-text">
                     	Password must be atleast 8 characters long and contain atleast 1 capital letter, 1 lowercase letter and 1 number	
                     </div>
+                    </div>
+					
               	</div>
                 
                 <div class="col-sm-6 bordercss">

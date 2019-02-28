@@ -110,7 +110,7 @@
           </section>
 	</nav>
 
- <div class="container-fluid content">    
+ <div class="container-fluid content" id="div_print">    
   	<div class="row">
         <div class="col-sm-12">
                 <div class="row">
@@ -127,7 +127,7 @@
                             <div style="clear:both;"></div>
                             <div class="doc-box-field">
                             	
-                            	<form id="expForm" name="expressPay" method="post" action="#" class="row m-l-0 profile-fields">
+                            	<form id="expForm" name="expressPay" action="#" method="post" class="row m-l-0 profile-fields">
                                 	<div class="col-sm-12 profile-group-edit m-l-18 m-t-18">Account Details</div>
                                     
                             		<div class="col-sm-4 p-l-18 p-t-8">
@@ -180,12 +180,12 @@
 											<select class="form-control input-field-profile profile-drop" name="browser" onchange="if(this.options[this.selectedIndex].value=='customOption'){
                                                                                                                           toggleField(this,this.nextSibling);
                                                                                                                           this.selectedIndex='0';
-                                                                                                                     }">
-                                                <option value="">Please choose</option>                                                                     
-            									<option value="">Min Due - $119.99</option>
+                                                                                                                     }" required>
+                                                <option disabled  value="">Please choose</option>                                                                     
+            									<option selected value="">Min Due - $119.99</option>
 												<option value="">Current Balance</option>
 												<option  value="customOption">Other Amount</option>
-        									</select><input name="browser"  class="form-control input-field-profile numbersonly profile-drop" style="display:none;" disabled="disabled" onclick="if((this.value=='')||(this.value!=='')){toggleField(this,this.previousSibling);}" >
+        									</select><input name="browser"  class="form-control input-field-profile numbersonly profile-drop" style="display:none;" disabled="disabled" onclick="if((this.value=='')||(this.value!=='')){toggleField(this,this.previousSibling);}" required >
                          				</div>
                                     </div>
                                     
@@ -229,21 +229,21 @@
                                      <div class="col-md-5 p-l-18 p-t-12">
                                         <div class="profile-group input-group">
                                             <label for="fromcard" class="col-form-label express-label text-left w-full">From</label>
-                                            <input type="text" class="form-control input-field-profile" name="fromcard" alt="" value="Checking ***9454" placeholder="" required="" readonly>
+                                            <input type="text" class="form-control input-field-profile from" name="fromcard" alt="" value="Checking ***9454" placeholder="" required="" readonly>
                                         </div>
                                     </div>
                                     <div class="offset-5"></div>
                                     <div class="col-md-5 p-l-18 p-t-8">
                                         <div class="profile-group input-group">
                                             <label for="dateon" class="col-form-label express-label text-left w-full">Date</label>
-                                            <input type="text" class="form-control input-field-profile" name="dateon" alt="" value="10/24/2018" placeholder="" required="" readonly>
+                                            <input type="text" class="form-control input-field-profile date" name="dateon" alt="" value="10/24/2018" placeholder="" required="" readonly>
                                         </div>
                                     </div>
                                     <div class="offset-5"></div>
                                      <div class="col-md-5 p-l-18 p-t-8 p-b-12">
                                         <div class="profile-group input-group">
                                             <label for="amount" class="col-form-label express-label text-left w-full">Amount</label>
-                                            <input type="text" class="form-control input-field-profile" name="amount" alt="" value="$199.99" placeholder="" required="" readonly>
+                                            <input type="text" class="form-control input-field-profile amount" name="amount" alt="" value="$199.99" placeholder="" required="" readonly >
                                         </div>
                                     </div>
                                     <div class="offset-6"></div>
@@ -301,7 +301,7 @@
                                      <div class="offset-4"></div>
                                      <div class="col-sm-2 p-t-8">
                                         <div class="profile-group input-group">
-                                           <input type="submit" value="PRINT" class="profile-save-btn print-conf">
+                                           <input type="submit" value="PRINT" onClick="printdiv('div_print');" class="profile-save-btn print-conf">
                                         </div>
                                     </div>
                                     

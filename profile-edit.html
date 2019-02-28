@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/util.css">
 <link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/skin.css">
 <!--[if lt IE 9]>
@@ -24,9 +26,17 @@
 <script src="js/breakpoints.min.js"></script>
 <script>
     Breakpoints();
+  </script> <script src="js/angular.min.js"></script>  
+  <script type="text/javascript">
+   var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+   
+    $scope.email = 'john.doe@gmail.com';
+});
   </script>
+  
 </head>
-<body>
+<body ng-app="myApp" ng-controller="validateCtrl">
 <div class="mobile-menu">
  <nav class="menu-list-mobile">
       <a href="account-summary.html">Account Summary</a>
@@ -114,54 +124,65 @@
     	
         <div class="col-sm-12 profile-head">Profile Management
         </div>
-        <form class="row m-l-0 profile-fields">
+        <form class="row m-l-0 profile-fields" name="form">
         		<div class="col-sm-12 p-l-10 p-r-8">
                 	<div class="info-change">Any Information want to be changed here please call CSR</div>
                 </div>
     			<div class="col-sm-3 p-l-10 p-r-8">
              		<div class="profile-group input-group">
                             <label for="username" class="col-form-label text-left w-full">User Name:</label>
-                            <input type="text" class="form-control input-field-profile alphabetsonly" name="username" alt="username" value="aba@xyz.com" placeholder="Choose a User Name" readonly="" required>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" ng-minlength="8" ng-maxlength="20" name="username" ng-model="Username" alt="username" autocomplete="off" value="aba@xyz.com" placeholder="Choose a User Name" readonly  required>
                         </div>
+						
+						   
                     </div>
                     <div class="col-sm-3  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="fname" class="col-form-label text-left w-full">First Name:</label>
-                            <input type="text" class="form-control input-field-profile alphabetsonly" name="fname" alt="First Name" value="Abc" placeholder="First Name" readonly="" required>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="fname" alt="First Name" ng-model="firstname" value="Abc" placeholder="First Name" readonly required>
                         </div>
+						
                     </div>
                     <div class="col-sm-3  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="lname" class="col-form-label text-left w-full">Last Name:</label>
-                            <input type="text" class="form-control input-field-profile alphabetsonly" name="lname" alt="Last Name" value="Xyz" placeholder="Last Name" readonly="" required>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="lname" alt="Last Name" ng-model="lastname" value="Xyz" placeholder="Last Name" readonly required>
                         </div>
+						
                     </div>
                     <div class="col-sm-3  p-l-10 p-r-8">
                     	
                     </div>
                     <div class="col-sm-5  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
-                            <label for="staddone" class="col-form-label text-left w-full">Street Address 1:</label>
-                            <input type="text" class="form-control input-field-profile" name="staddone" alt="Street Address 1"  value="Georgia State Campus," placeholder="Street Address 1" required>
+                            <label for="address 1" class="col-form-label text-left w-full">Street Address 1:</label>
+                            <input type="text" class="form-control input-field-profile" name="staddone" alt="Street Address 1" ng-model="Address1" value="Georgia State Campus," placeholder="Street Address 1" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.staddone.$touched && form.staddone.$invalid ">
+						   Required</span>
                     </div>
                      <div class="col-sm-5  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
-                            <label for="lname" class="col-form-label text-left w-full">Street Address 2:</label>
-                            <input type="text" class="form-control input-field-profile" name="staddone" alt="Street Address 2" value="100 Piedmont Ave SE" placeholder="Street Address 2" required>
+                            <label for="address 2" class="col-form-label text-left w-full">Street Address 2:</label>
+                            <input type="text" class="form-control input-field-profile" name="staddtwo" alt="Street Address 2" ng-model="Address2" value="100 Piedmont Ave SE" placeholder="Street Address 2" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.staddtwo.$touched && form.staddtwo.$invalid ">
+						   Required</span>
                     </div>
                     <div class="col-sm-5  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="city" class="col-form-label text-left w-full">City:</label>
-                            <input type="text" class="form-control input-field-profile alphabetsonly" name="city" alt="City" value="Atlanta" placeholder="City" required>
+                            <input type="text" class="form-control input-field-profile alphabetsonly" name="city" alt="City" ng-model="city" value="Atlanta" placeholder="City" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.city.$touched && form.city.$invalid ">
+						   Required</span>
+						
                     </div>
                      <div class="col-sm-3  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="state" class="col-form-label text-left w-full">State:</label>
 							
-										<select class="form-control input-field-profile profile-select" name="state">
+										<select class="form-control input-field-profile profile-select" ng-model="state" name="state" required>
 										<option value="AL">Alabama</option>
 										<option value="AK">Alaska</option>
 										<option value="AZ">Arizona</option>
@@ -216,18 +237,29 @@
 									</select>			
                          <!--   <input type="text" class="form-control input-field-profile alphabetsonly" name="state" alt="State" value="GA" placeholder="State" required> -->
                         </div>
+						<span class="msg angErrmsg" ng-show="form.state.$touched && form.state.$invalid  ">
+						   Required</span>
                     </div>
                      <div class="col-sm-2  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="zip" class="col-form-label text-left w-full">ZIP:</label>
-                            <input type="text" class="form-control input-field-profile numbersonly" name="zip" alt="ZIP" value="85485" maxlength="5" placeholder="XXXXX" required>
+                            <input type="text" class="form-control input-field-profile numbersonly" name="zip" ng-model="zip" alt="ZIP" value="85485" maxlength="5" placeholder="XXXXX" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.zip.$touched && form.zip.$invalid ">
+						    Required</span>
                     </div>
                     <div class="col-sm-5  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="zip" class="col-form-label text-left w-full">Email Address:</label>
-                            <input type="email" class="form-control input-field-profile" name="email" alt="email" value="abc@gmail.com" placeholder="Email" required>
+                            <input type="email" class="form-control input-field-profile" name="email" alt="email" ng-model="email" placeholder="Email" required>
                         </div>
+						
+						
+						<span class="msg angErrmsg" ng-show="form.email.$error.required">
+						   Email is Required</span>
+						   <span class=" msg angErrmsg" ng-show="form.email.$error.email">
+						   Please enter valid email address</span>
+						   
                     </div>
                      <div class="col-sm-6 p-l-10 p-r-8">
                     	<div class="email-change">By changing Email Address your username will be changed to your updated Email Address. Email notifications will be sent to this email if turned on.</div>
@@ -235,21 +267,94 @@
                     <div class="col-sm-3  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="mobilephone" class="col-form-label text-left w-full phonelabel">Mobile Phone #(Text notifications):</label>
-                            <input type="text" class="form-control input-field-profile phoneval" maxlength="13" name="mobilephone" alt="Mobile phone" value="(777)888-9999" placeholder="Mobile Phone" required>
+                            <input type="text" class="form-control input-field-profile phoneval" maxlength="13" name="mobilephone"  ng-model="mobilephone" alt="Mobile phone" value="(777)888-9999" placeholder="Mobile Phone" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.mobilephone.$touched && form.mobilephone.$invalid ">
+						    Required</span>
+						
                     </div>
                     <div class="col-sm-3  p-l-10 p-r-8">
                     	<div class="profile-group input-group">
                             <label for="homephone" class="col-form-label  text-left w-full phonelabel">Home Phone #:</label>
-                            <input type="text" class="form-control input-field-profile phoneval"  maxlength="13" name="homephone" alt="Home phone" value="(778)666-9999" placeholder="Home Phone" required>
+                            <input type="text" class="form-control input-field-profile phoneval"  maxlength="13" name="homephone" ng-model="homephone"  alt="Home phone" value="(778)666-9999" placeholder="Home Phone" required>
                         </div>
+						<span class=" msg angErrmsg" ng-show="form.homephone.$touched && form.homephone.$invalid ">
+						    Required</span>
+						
                     </div>
                     <div class="col-sm-12 p-l-10 p-r-8">
                     		<div class="terms-cond">Please read <a href="#">Terms & Conditions.</a></div>
+                            
+								<div class="panel-ec profile-box-field">
+									<div class="row">
+                                    	<div class="col-md-12">
+                                        	<div class="bank-aggre">
+                                            	<span>Bank agreement 10/24/2018</span>
+                                                <div class="bank-agr-text">NEED CONSENT<img src="images/need_consent.png"></div>
+                                                	<div class="aggre-data m-t-15" style="display: block;">
+                                                		<div class="close-butt">Terms &amp; Conditions<img src="images/TC_close.png"></div>
+                										<div class="agg-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.      
+                                                      <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                         </div>
+                                                        <div class="aggr-bottom">
+                											<div class="checkbox_doc">
+                        										<input type="checkbox"><label>I agree to the terms &amp; conditions</label>
+                                                                <input type="button" value="ACCEPT" class="agg-accpet">
+                   										 	</div>
+                                                         </div>
+                                                         <div style="clear:both;"></div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                    	</div>
+                                        <div class="row">
+                                    		<div class="col-md-12">
+                                        		<div class="bank-aggre">
+                                                    <span>Bank agreement 09/02/2018</span>
+                                                    <div class="bank-view-agr">VIEW</div>
+                                                    <div class="aggre-dataview m-t-15" style="display: none;">
+                                                		<div class="close-butt">Terms &amp; Conditions<img src="images/TC_close.png"></div>
+                										<div class="agg-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.      
+                                                      <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                        </div>
+                                                        <div class="aggr-bottom">
+                											<div class="checkbox_doc">
+                        										<input type="checkbox"><label>I agree to the terms &amp; conditions</label>
+                                                                <input type="submit" value="ACCEPT" class="agg-accpet">
+                   										 	</div>
+                                                         </div>
+                                                         <div style="clear:both;"></div>
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                         </div>
+                                         <div class="row">
+                                    		<div class="col-md-12">
+                                        		<div class="bank-aggre" style="border-bottom:none;">
+                                                    <span>Bank agreement 08/02/2018</span>
+                                                    <div class="bank-agr-view">VIEW</div>
+                                                    <div class="aggre-viewdata m-t-15" style="display: none;">
+                                                		<div class="close-butt">Terms &amp; Conditions<img src="images/TC_close.png"></div>
+                										<div class="agg-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.      
+                                                      <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                      <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.                                                        	
+                                                        </div>
+                                                        <div class="aggr-bottom">
+                											<div class="checkbox_doc">
+                        										<input type="checkbox"><label>I agree to the terms &amp; conditions</label>
+                                                                <input type="submit" value="ACCEPT" class="agg-accpet">
+                   										 	</div>
+                                                         </div>
+                                                         <div style="clear:both;"></div>
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                         </div>   
+									</div>
                     </div>
-                    <div class=" offset-8">
-                    
-                    </div>
+                    <div class=" offset-8"></div>
                     <div class="col-sm-2">
                     	<div class="profile-group input-group">
                         	<input type="submit" value="CANCEL" class="profile-cancel-btn">
