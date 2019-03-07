@@ -409,6 +409,7 @@ box-shadow: 1px 1px 12px 5px #f5f5f5;
     padding: 24px 0px 24px 20px;
     font-size: 16px;
     color: #4a4a4a;
+	width: 100% !important;
     font-weight: normal;
     border: 1px solid #c1c1c1;
 	background-color:#FFF;
@@ -420,6 +421,7 @@ box-shadow: 1px 1px 12px 5px #f5f5f5;
 .input-field-nrml {
     padding: 24px 0px 24px 20px;
     font-size: 16px;
+	width: 100% !important;
     color: #4a4a4a;
     font-weight: normal;
     border: 1px solid #c1c1c1;
@@ -434,7 +436,7 @@ box-shadow: 1px 1px 12px 5px #f5f5f5;
 	color:#969595;
 	font-weight:normal;
 	text-align:left;
-	padding: 12px 0px 12px 45px;
+	padding: 12px 0px 12px 26px;
 }
 .reg-pre-text {   font-size: 28px;
     font-weight: 600;
@@ -1146,7 +1148,7 @@ color: #737070;
 	font-size:14px;
 	color:#222222;
 	font-weight:normal;
-	padding: 6px 0px 14px 0px;
+	padding: 6px 0px 8px 0px;
 }
 .terms-cond a{
 	color:#1e71cd;
@@ -1164,6 +1166,20 @@ color: #737070;
     padding: 5px 0px 5px 12px !important;
     height: 42px;
     z-index: 4;
+}
+.profile-drop1 { 
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    outline: none;
+	color:#222222;
+    padding: 5px 0px 5px 12px !important;
+    height: 42px;
+    z-index: 4;
+		border-right: none;
+	border-radius: 5px 0px 0px 5px !important;
 }
 .profile-date {
     background-image: url(../images/date-img.png);
@@ -1417,14 +1433,15 @@ border-radius: 5px 5px 0px 0px;
 select::-ms-expand {
     display: none;
 }
+.input-errmsg{padding: 12px 0px 0px 0px !important;}
 .paginnew{margin-left:40%;}
 .paginnew li a{ color:#15397f; }
 .link-active{border-bottom:1px solid #15397f;}
 .page-item:first-child .page-link{border-top-left-radius: 25px;border-bottom-left-radius: 25px;}
 .page-item:last-child .page-link{border-top-right-radius: 25px;border-bottom-right-radius: 25px;}
-.angErrmsg{color:red; font-size:13px;font-weight:normal;float:left;}
-.angErrmsg_np{color:red;font-weight:normal;}
-.angErrmsg_tp{color:red;margin-left:40px;font-weight:normal;}
+.angErrmsg{color:red; font-size:13px;font-weight:normal;float:left; width:100%; text-align:left; padding:5px 0px 5px 5px;}
+.angErrmsg_np{color:red;font-weight:normal; width:100%; text-align:left; }
+.angErrmsg_tp{color:red;margin-left:40px;font-weight:normal; width:100%; text-align:left;}
 /*End */
 .tsh-table{
 	overflow-y:scroll !important;	
@@ -1481,6 +1498,7 @@ select::-ms-expand {
 	text-align:left;
 	padding:5px 0px;
 }
+
 .p-blk-text{
 	color:#222222 !important;
 }
@@ -1509,8 +1527,8 @@ color:red; font-size:14px;margin-left:20px;font-weight:normal;
 	height: 42px;
 	z-index:31;
 }
-.angerrPwd{ font-weight:normal;color:red; }
-.dispPassword{width: 473px;margin: 5px auto 0px auto;padding:3px;border-radius: 4px;color:#969595;font-size:18px;}
+.angerrPwd{ font-weight:normal;color:red; text-align:left; padding:5px 0px 5px 5px; }
+.dispPassword{width: 473px;margin: 5px auto 0px auto; text-align:left; padding:5px 0px 5px 5px; border-radius: 4px;color:#969595;font-size:18px;}
 .ptf{ font-weight:bold !important; color:#242323;}
 .exp-text{ font-size:14px; color:#4a4a4a; text-align:left;}
 .error-message{
@@ -1534,6 +1552,48 @@ color:red; font-size:14px;margin-left:20px;font-weight:normal;
 	float:right;
 	text-align:left;
 }
+.exp-drop{
+	position:relative;	
+}
+.exp-drop img{
+	position:absolute;	
+	top: 38px;
+    right: 5px;
+    z-index: 18;
+
+}
+.exp-currency{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    outline: none;
+    color: #222222;
+    padding: 5px 0px 5px 12px !important;
+    height: 42px;
+    z-index: 4;
+}
+.editOption{
+    width:86% !important;
+    position: relative;
+    top: -42px;
+    padding-left: 10px !important;
+	height:42px;
+}
+.profile-drop option{
+	 height:42px;
+}
+.editable{
+	padding-left: 10px !important;
+
+}
+#billdesc{
+
+}
+#test{
+width: 100%;
+height:42px;
+}
+
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
 {
   input::-webkit-contacts-auto-fill-button {
@@ -1579,6 +1639,9 @@ input[type=text]::-webkit-credentials-auto-fill-button {
     font-size: 12px;
     font-weight: normal;
 }
+.editOption {
+    width: 83% !important;
+}
 }
 @media screen and (max-width:1088px) {
 	.reg-form {
@@ -1590,8 +1653,14 @@ input[type=text]::-webkit-credentials-auto-fill-button {
     width: 116px;
     font-size: 10px;
 }
+.editOption {
+    width: 82% !important;
+}
 .alert-border p {
     font-size: 13px !important;
+}
+.exp-drop img {
+	    top: 33px;
 }
 .exp-text {
     font-size: 13px;
@@ -1678,6 +1747,9 @@ input[type=text]::-webkit-credentials-auto-fill-button {
 .appstatus .alert-ins {
     font-size: 18px;
     line-height: 21px;
+}
+.editOption {
+    width: 78% !important;
 }
 .content {
     width: calc(100% - 225px);
@@ -1767,6 +1839,9 @@ input[type=text]::-webkit-credentials-auto-fill-button {
 .reg-pre-text {    padding: 42px 0px 0px 0px;}
 .acc-text {
     font-size: 11px;
+}
+.editOption {
+    width: 77% !important;
 }
 .recent-text {
     font-size: 11px;
@@ -2046,6 +2121,7 @@ width:100%;
 .phonelabel {
     height: auto;
 }
+.profile-cancel-btn { margin:0px;}
 .error-message strong { font-size:14px;    width: 84%;}
 }
 @media (max-width:479px) {
@@ -2171,8 +2247,7 @@ input[type="checkbox"] + label{
 input[type="checkbox"] + label {
     width: 100%;
 	 display: flex;
-	     font-size: 11px;
-    padding: 2px 0 0 28px;
+    padding: 0px 0 0 27px;
 }
 .agg-accpet {
     width: 98%;

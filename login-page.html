@@ -87,13 +87,13 @@
 								<span class="input-group-text"><img src="images/username.png"></span>
 							</div>
 							  <input type="text" class="form-control bankusername" name="username" ng-model="username" 
-							   placeholder="Username" required />   
+							   placeholder="Username" required />  
+                               <div style="clear:both;"></div> 
+                               <span class=" msg angErrmsg" ng-show="login_form.username.$touched && login_form.username.$invalid ">
+						   		Required</span>
+						  		<span class="msg angErrmsg" ng-show="login_form.username.$error.dirty && login_form.username.$error.required">
+						   		Please enter a valid username</span>
 						</div>
-                        	<span class=" msg angErrmsg" ng-show="login_form.username.$touched && login_form.username.$invalid ">
-						   	Required</span>
-						  	<span class="msg angErrmsg" ng-show="login_form.username.$error.dirty && login_form.username.$error.required">
-						   	Please enter a valid username</span>
-						
 					</div>
 					<div class="col-sm-12">
 						<div class="input-group input-login">

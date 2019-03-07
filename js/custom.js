@@ -1,3 +1,30 @@
+//Edit field
+var initialText = $('.editable').val();
+$('.editOption').val(initialText);
+$('#test').change(function(){
+var selected = $('option:selected', this).attr('class');
+var optionText = $('.editable').text();
+
+if(selected == "editable"){
+  $('.editOption').show();
+
+  
+  $('.editOption').keyup(function(){
+      var editText = $('.editOption').val();
+      $('.editable').val(editText);
+      $('.editable').html(editText);
+	  $('.editable').text(optionText);
+  });
+
+}else{
+  $('.editOption').hide();
+}
+});
+
+//Comma
+$(document).ready(function() {
+$(".comma").mask("#,##,000.00");
+});	
 //Express Pay in one page for three divis
 $(document).ready(function(){
   $(".payment-conf").click(function(){
@@ -17,16 +44,10 @@ $('.close-field').click(function(){
 	 $(".paymentdivi").show();
 }); 
   $(".edit-conf").click(function(e){
-	 e.preventDefault();
-   $(".from").focus();
-	$(".from").prop("readonly",false);
-	$(".amount").prop("readonly",false);
-	$(".date").prop("readonly",false);
-	
-	
+	$(".paymentdivi").show();
   });
     });
-	
+
 //Print Function	
 function printdiv(printpage)
 {
@@ -162,7 +183,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$(".terms-cond a").click(function(){
-		$(".panel-ec").toggle();
+		$(".aggre-data").toggle();
 	});
 });
 //Responsive menu Bar
