@@ -438,6 +438,7 @@ box-shadow: 1px 1px 12px 5px #f5f5f5;
 	text-align:left;
 	padding: 12px 0px 12px 26px;
 }
+.manage-text{padding: 12px 0px 12px 0px !important;}
 .reg-pre-text {   font-size: 28px;
     font-weight: 600;
     color: #d31145;
