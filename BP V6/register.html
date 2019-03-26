@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Register</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body style="background-color: #f5f5f5;" ng-app="StrengthValidationApp">
+<div class="mobile-menu">
+ <nav class="menu-list-mobile">
+      <a href="#">About</a>
+      <a href="#">News</a>
+      <a href="#">Contact Us</a>
+  </nav>
+</div>
+<div class="mask_menu"></div>
+<!-- Header -->
+<div class="register-body">
+<header class="container-fluid head-design">
+	<div class="head-design-sub">
+      <div class="row">
+        <div class="col-4 col-sm-4">
+        	<div class="logo-text"><img src="images/logo-cg.png"></div>
+        </div>
+        <div class="col-8 col-sm-8">
+        	<div class="responsive_icon"></div>
+        	<nav class="menu-list">
+            	<a href="#">About</a>
+                <a href="#">News</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+      </div>
+    </div>
+</header>
+<section ng-controller="StrengthValidationCtrl">
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-12 col-sm-12 form-load">
+        	<div class="col-sm-12">
+        	<h1 class="reg-pre-text" >Register
+            	<div class="reg-sub-text">
+                    	Now that you have accepted the line of credit a login so that you can access your account to view statements and update your details if necessary in future.	
+            	</div>
+            
+            </h1>
+            
+            	
+            </div>
+        	<form action="" id="regForm" name="passwordForm" method="post" class="reg-form form-group row">
+            	
+                <div style="clear:both;"></div>   
+                <div class="col-sm-6 ">
+                   <div class=" form-group input-group input-login">
+                   		<label for="username" class="col-form-label text-left w-full">Username</label>
+                      	<input type="text" class="form-control input-field-nrml alphabetsonly" name="username" alt="username" value="aba@xyz.com" placeholder="Choose a User Name" readonly required>
+                    </div>
+              
+                   <div class="form-group input-group input-login">
+                   		<label for="choosepassword" class="col-form-label text-left w-full">Choose a Password</label>
+						  <span class="glyphicon glyphicon-eye-open gly-choose-pwd"></span>
+                      	<input type="password" ng-show="loginCtrl.showTouchID" ng-model="user.userPassword" ng-change="validationInputPwdText(user.userPassword)" 
+						class="form-control input-field-blr choosepassword" id="choosepassword" name="password" placeholder="Choose a Password" required>
+                       <span class="help-inline" data-ng-show='passwordForm.password.$valid && passwordForm.password.$dirty' data-ng-class="strength" ng-style="checkpwdStrength">
+				 <span ng-bind="message1"></span> </span>
+                    </div>
+					
+              	
+                   <div class="form-group input-group input-login">
+                  		<label for="repeatpassword" class="col-form-label text-left w-full">Repeat Password</label>
+                      	<input type="password" class="form-control input-field-blr repeatpassword" ng-model="user.repeatpassword" compare-to="user.userPassword"  id="repeatpassword" name="repeatpassword" placeholder="Repeat Password" required>
+                        <span class="glyphicon glyphicon-eye-open gly-repeat-pwd"></span>
+                        <span class="angerrPwd" ng-show="passwordForm.repeatpassword.$dirty && passwordForm.repeatpassword.$invalid">Repeat Password doesn't match with the chosen password.</span>
+                	<div class="pass-text manage-text">
+                    	Password must be atleast 8 characters long and contain atleast 1 capital letter, 1 lowercase letter and 1 number	
+                    </div>
+                    </div>
+					
+              	</div>
+                
+                <div class="col-sm-6 bordercss">
+                   <div class="form-group input-group input-login">
+                   		<label for="firstname" class="col-form-label text-left w-full">First Name</label>
+                      	<input type="text" class="form-control input-field-nrml alphabetsonly" name="firstname" value="xyz" placeholder="First Name" readonly required>
+                    </div>
+              	
+                   <div class="form-group input-group input-login">
+                   		<label for="lastname" class="col-form-label text-left w-full">Last Name</label>
+                      	<input type="text" class="form-control input-field-nrml alphabetsonly" name="lastname"  value="abc" placeholder="Last Name" readonly required>
+                    </div>
+              	</div>
+                
+                
+                <div class="col-sm-5 offset-2">
+                </div>
+                <div class="col-sm-7">
+                	<input type="submit" value="REGISTER" class="reg-submit-form">
+                </div> 
+            </form>
+    	</div>
+	</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container-fluid register-footer">
+	<div class="row">
+    	<div class="col-sm-6">
+        	<div class="rights-text-res">BankName 2018. All Rights Reserved.</div>
+        </div>
+    	<div class="col-sm-6">
+            <nav class="footer-menu-list-res">
+                <a href="#">FAQs</a>
+                <a href="#">Services</a>
+                <a href="#">About Us</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </nav>
+        </div> 
+    </div>
+</div>
+</footer>
+</div>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/custom.js'></script>
+<script src="js/angular.min.js"></script>  
+<script type="text/javascript">
+ var app = angular.module("StrengthValidationApp", []);
+    app.controller("StrengthValidationCtrl", function($scope) {
+
+      var strongRegularExp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+      var mediumRegularExp = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+      $scope.checkpwdStrength = {
+      "width":"500px","color":"red","font-weight":"normal","font-size":"15px"};
+	  $scope.loginCtrl = {showTouchID: true};
+	  $scope.user = {
+		password: "",repeatpassword: ""
+	  };
+      $scope.validationInputPwdText = function(value) {
+        if (strongRegularExp.test(value)) {
+          $scope.checkpwdStrength["background-color"] = "#fff";
+		  $scope.message1="";
+        } else if (mediumRegularExp.test(value)) {
+          $scope.checkpwdStrength["background-color"] = "#fff";
+		  $scope.message1="Password must be atleast 8 characters long and contain atleast 1 capital letter, 1 lowercase letter and 1 number";
+        } else {
+          $scope.checkpwdStrength["background-color"] = "#fff";
+		   $scope.message1="Password must be atleast 8 characters long and contain atleast 1 capital letter, 1 lowercase letter and 1 number";
+        }
+      };
+		
+    });
+	app.directive("compareTo", function() {
+      return {
+        require: "ngModel",
+        scope: {
+          repeatpassword: "=compareTo"
+        },
+        link: function(scope, element, attributes, modelVal) {
+
+          modelVal.$validators.compareTo = function(val) {
+            return val == scope.repeatpassword;
+          };
+
+          scope.$watch("repeatpassword", function() {
+            modelVal.$validate();
+          });
+        }
+      };
+    });
+  </script>
+</body>
+</html>
