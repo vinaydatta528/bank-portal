@@ -1,17 +1,45 @@
+
+//Profile View
+$(document).ready(function(){
+	$(".profile-edit-e").click(function(){
+		 $(this).closest(".wallet-details").find(".profile-edit").show();
+		  $(this).closest(".wallet-details").find(".profile-view").hide();
+		});
+	$(".profile-view-v").click(function(){
+		  $(this).closest(".wallet-details").find(".profile-view").show();
+		  $(this).closest(".wallet-details").find(".profile-edit").hide();
+		});
+	$(".profile-close").click(function(){
+			 $(this).closest(".profile-edit").hide();	
+			 $(this).closest(".profile-view").hide();
+		});
+		$(".profile-edit-but").click(function(){
+		 $(this).closest(".wallet-details").find(".profile-edit").show();
+		   $(this).closest(".wallet-details").find(".profile-view").hide();
+	});
+	});
 // Expiry Date Validation
 $(function () {
     $('.expiryval').keydown(function (e) {
        var key = e.charCode || e.keyCode || 0;
-       $text = $(this); 
+	   $text = $(this);
+	   if(key == 8) { return true; }
        if (key !== 1 && key !== 2  ) {		   
            if ($text.val().length == 2 ) {
-               $text.val($text.val() + '/');
-				if( key == 8 || key == 46 )
-                 $text.val('');
+               $text.val($text.val() + '/');	
            } 
        }
        return (key == 2 || key == 4 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105) || key == 8 || key == 9);
-   })
+   }) 
+     $('.expiryval').keydown(function() {
+  var thisValue = $(this).val();
+  var numChars = thisValue.length;
+  if (numChars < 4) {
+    $('#dateErr').show();
+  } else {
+    $('#dateErr').hide();
+  }
+}); 
 }); 
 //Card div show
 $('#card-payment').on('change', function () {
@@ -45,11 +73,15 @@ $(document).ready(function(){
   $('.default-blue:contains("SET AS DEFAULT")').click(function(e){
      e.preventDefault();
   $(this).text('DEFAULT SELECTED').css("color","#00c37b");
-  $(".default-green").text('SET AS DEFAULT').css("color","#1d71cf");;
+  $(".default-green").text('SET AS DEFAULT').css("color","#1d71cf");
+  $(this).closest(".hidedelete").find(".profile-delete").hide();
+  $(".default-green").closest(".hidedelete").find(".profile-delete").show();
     $('.default-green:contains("SET AS DEFAULT")').click(function(e){
      e.preventDefault();
   $(this).text('DEFAULT SELECTED').css("color","#00c37b");;
-  $(".default-blue").text('SET AS DEFAULT').css("color","#1d71cf");;
+  $(".default-blue").text('SET AS DEFAULT').css("color","#1d71cf");
+  $(this).closest(".hidedelete").find(".profile-delete").hide();
+   $(".default-blue").closest(".hidedelete").find(".profile-delete").show();
   });
   });
 $('.default-sel:contains("DEFAULT SELECTED")').click(function(){;
@@ -260,6 +292,16 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".terms-cond a").click(function(){
 		$(".aggre-data").toggle();
+	});
+});
+//Another profile terms
+$(document).ready(function(){
+	$(".terms-notify a").click(function(){
+		$(".aggre-notify").toggle();
+	});
+	$(".notify-butt img").click(function(){
+		$(".aggre-notify").hide();
+		
 	});
 });
 

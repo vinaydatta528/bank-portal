@@ -34,12 +34,8 @@
 </head>
 <body style="background-color: #f5f5f5;" ng-app="myApp">
 <div class="mobile-menu">
- <nav class="menu-list-mobile">
-      <a href="#">About</a>
-      <a href="#">News</a>
-      <a href="#">Contact Us</a>
-  </nav>
-</div>
+    <nav class="menu-list-mobile"> <a href="#">About</a> <a href="#">News</a> <a href="contact-us.html">Contact Us</a> <a href="faqs.html">FAQs</a> <a href="#">Services</a> <a href="terms-of-use.html">Terms of Use</a> <a href="privacy-policy.html">Privacy Policy</a> </nav>
+  </div>
 <div class="mask_menu"></div>
 <!-- Header -->
 <div class="register-body">
@@ -54,7 +50,7 @@
         	<nav class="menu-list">
             	<a href="#">About</a>
                 <a href="#">News</a>
-                <a href="#">Contact Us</a>
+                <a href="contact-us.html">Contact Us</a>
             </nav>
         </div>
       </div>
@@ -71,22 +67,22 @@
                 <div class="col-sm-12">
                    <div class="input-group input-login">
                       	<input type="email" class="form-control input-field-blr" name="email" required alt="Email" ng-model="user.email"  placeholder="Email address">
-                    </div>
-					 <span class="msg angErrmsg" ng-show="reg_form.email.$dirty && reg_form.email.$error.required">Email is required.</span>
 					<span class="msg angErrmsg" ng-show="reg_form.email.$dirty && reg_form.email.$error.email">Please enter valid Email address.</span>
+                    <span class="msg angErrmsg" ng-show="(reg_form.email.$touched && !reg_form.email.$dirty && reg_form.email.$invalid) || (reg_form.email.$dirty && reg_form.email.$error.required)">Required</span>
+                    </div>
+					 
     
               	</div>
                 <div class="col-sm-12">
                    <div class="input-group input-login">
                       	<input type="text" class="form-control input-field-blr numbersonly" name="digitalssn" ng-model="user.digitalssn" alt="Last 4 digit SSN" placeholder="Last 4 digit SSN" 
 						ng-minlength="4" ng-maxlength="4" required>
-                    </div>
-					<span class="msg angErrmsg" ng-show="reg_form.digitalssn.$dirty && reg_form.digitalssn.$error.required">SSN is required</span>
+                        <span class="msg angErrmsg" ng-show="(reg_form.digitalssn.$touched && !reg_form.digitalssn.$dirty && reg_form.digitalssn.$invalid) || (reg_form.digitalssn.$dirty && reg_form.digitalssn.$error.required)">Required</span>
 					<span class="msg angErrmsg" ng-show="reg_form.digitalssn.$dirty && reg_form.digitalssn.$error.minlength">
                           Please enter last 4 digits SSN</span>
 					 <span class="msg angErrmsg" ng-show="reg_form.digitalssn.$dirty && reg_form.digitalssn.$error.maxlength">
                           Please enter only last 4 digits SSN, should not exceed 4digits</span>
-				
+                    </div>
               	</div>
                 <div class="col-sm-12">
                 	<input type="submit" value="CONTINUE" class="continue-form">
@@ -104,13 +100,8 @@
         	<div class="rights-text-res">BankName 2018. All Rights Reserved.</div>
         </div>
     	<div class="col-sm-6">
-            <nav class="footer-menu-list-res">
-                <a href="#">FAQs</a>
-                <a href="#">Services</a>
-                <a href="#">About Us</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-            </nav>
+            <nav class="footer-menu-list-res"> <a href="faqs.html">FAQs</a> <a href="">Services</a> <a href="">About Us</a> 
+ <a href="terms-of-use.html">Terms of Use</a> <a href="privacy-policy.html">Privacy Policy</a> </nav>
         </div> 
     </div>
 </div>

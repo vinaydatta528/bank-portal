@@ -29,12 +29,8 @@
 </head>
 <body style="background-color: #f5f5f5;" ng-app="StrengthValidationApp">
 <div class="mobile-menu">
- <nav class="menu-list-mobile">
-      <a href="#">About</a>
-      <a href="#">News</a>
-      <a href="#">Contact Us</a>
-  </nav>
-</div>
+    <nav class="menu-list-mobile"> <a href="#">About</a> <a href="#">News</a> <a href="contact-us.html">Contact Us</a> <a href="faqs.html">FAQs</a> <a href="#">Services</a> <a href="terms-of-use.html">Terms of Use</a> <a href="privacy-policy.html">Privacy Policy</a> </nav>
+  </div>
 <div class="mask_menu"></div>
 <!-- Header -->
 <div class="register-body">
@@ -49,7 +45,7 @@
         	<nav class="menu-list">
             	<a href="#">About</a>
                 <a href="#">News</a>
-                <a href="#">Contact Us</a>
+                <a href="contact-us.html">Contact Us</a>
             </nav>
         </div>
       </div>
@@ -83,6 +79,7 @@
 						  <span class="glyphicon glyphicon-eye-open gly-choose-pwd"></span>
                       	<input type="password" ng-show="loginCtrl.showTouchID" ng-model="user.userPassword" ng-change="validationInputPwdText(user.userPassword)" 
 						class="form-control input-field-blr choosepassword" id="choosepassword" name="password" placeholder="Choose a Password" required>
+                        <span class="msg angErrmsg" ng-show="(passwordForm.password.$touched && !passwordForm.password.$dirty && passwordForm.password.$invalid) || (passwordForm.password.$dirty && passwordForm.password.$error.required)">Required</span>
                        <span class="help-inline" data-ng-show='passwordForm.password.$valid && passwordForm.password.$dirty' data-ng-class="strength" ng-style="checkpwdStrength">
 				 <span ng-bind="message1"></span> </span>
                     </div>
@@ -131,13 +128,8 @@
         	<div class="rights-text-res">BankName 2018. All Rights Reserved.</div>
         </div>
     	<div class="col-sm-6">
-            <nav class="footer-menu-list-res">
-                <a href="#">FAQs</a>
-                <a href="#">Services</a>
-                <a href="#">About Us</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-            </nav>
+             <nav class="footer-menu-list-res"> <a href="faqs.html">FAQs</a> <a href="">Services</a> <a href="">About Us</a> 
+ <a href="terms-of-use.html">Terms of Use</a> <a href="privacy-policy.html">Privacy Policy</a> </nav>
         </div> 
     </div>
 </div>

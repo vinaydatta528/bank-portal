@@ -225,6 +225,7 @@
                 	<label for="TextNotifications" class="col-form-label notify-label w-full">Text Notifications</label><br>
                     <div class="terms-notify">(Charges may be applied. Please read <a>Terms & Conditions</a>)</div>
                 </div>
+               
                 <div class="col-4 col-sm-6 profile-notify">
                 	<div class="checkbox-switch m-t-20">
                             <input type="checkbox" checked="" name="status" class="input-checkbox" >
@@ -233,6 +234,22 @@
                                 <span class="checkbox-on">ON</span>
                             </div>
                     </div>
+                </div>
+                 <div col-12 col-sm-12>
+                	<div class="aggre-notify">
+                        <div class="notify-butt">Terms &amp; Conditions<img src="images/TC_close.png"></div>
+                        <div class="agg-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. <br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Q is ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+                        <div class="aggr-bottom">
+                            <div class="checkbox_doc">
+                            <input type="checkbox">
+                            <label>I agree to the terms &amp; conditions</label>
+                            <input type="button" value="ACCEPT" class="agg-accpet">
+                          </div>
+                          </div>
+                        <div style="clear:both;"></div>
+                      </div>
                 </div>
                 <div class="col-8 col-sm-6 profile-notify">
                 	<label class="col-form-label text-npay w-full">Payment Notifications</label>
@@ -310,15 +327,94 @@
                             <div class="card-name">John Smith</div>
                         </div>
                     </div>
-                    <div class="col-5 col-sm-6">
+                    <div class="col-5 col-sm-6 hidedelete">
                     	<div class="wallet-def"><a class="default-sel default-green" style="color:#00c37b;" href="#">DEFAULT SELECTED</a></div>
                     	<div class="wallet-list">
                         	<ul>
-                                <li><a href="#">VIEW</a></li>
-                                <li><a href="#">EDIT</a></li>
-                                <li><a class="text-danger" href="#">DELETE</a></li>
+                                <li><a class="profile-view-v" href="">VIEW</a></li>
+                                <li><a class="profile-edit-e" href="">EDIT</a></li>
+                                <li><a class="text-danger profile-delete" style="display:none;" href="#">DELETE</a></li>
                             </ul>
                         </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-12 profile-edit" ng-controller="profilecontrol">
+                    	<div class="row">
+                                	<div class="col-md-5 cardach-group">
+                                      	<label for="cdnameview" class="col-form-label">Name on Card</label>
+                                      	<input type="text" class="form-control input-field-profile alphabetsonly" name="cdnameview" ng-model="cdnameview" value="John Smith" required>
+									 	<span class=" msg angErrmsg" ng-show="wallet.cdnameview.$touched && wallet.cdnameview.$invalid "> Required</span> 
+                                    </div>
+                                	<div class="col-md-3 cardach-group">
+                                      	<label for="expdateview" class="col-form-label">Expiry Date</label>
+                                      	<input type="text"  class="form-control input-field-profile expiryval valid" name="expdateview" value="02/23" ng-model="expdateview" maxlength="5" minlength="5"  placeholder="MM/YY" required>
+                                      	<span class=" msg angErrmsg" ng-show="(wallet.expdateview.$touched && !wallet.expdateview.$dirty && wallet.expdateview.$invalid) || (wallet.expdateview.$dirty && wallet.expdateview.$error.required)">Required</span>
+									   <span class=" msg angErrmsg" id="" style="display:none;">Enter a valid Date (MM/YY). </span>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                      <label for="secvview" class="col-form-label">Secure Code</label>
+                                      <input type="text" class="form-control input-field-profile numbersonly" name="secvview"  ng-model="secvview" maxlength="3" minlength="3" required>
+									  <span class=" msg angErrmsg" ng-show="wallet.secvview.$touched && wallet.secvview.$invalid "> Required</span>
+                                    </div>
+                                    <div class="col-md-5 cardach-group">
+                                      <label for="debitnumview" class="col-form-label">Card Number</label>
+                                      <input type="text" class="form-control input-field-profile numbersonly" maxlength="16" minlength="12" name="debitnumview" ng-model="debitnumview" required>
+									   <span class=" msg angErrmsg" ng-show="(wallet.debitnumview.$touched && !wallet.debitnumview.$dirty && wallet.debitnumview.$invalid) || (wallet.debitnumview.$dirty && wallet.debitnumview.$error.required)">Required</span>
+				                      <span class=" msg angErrmsg" ng-show="wallet.debitnumview.$dirty && wallet.debitnumview.$error.minlength" >Account number should contain max 12 -16</span>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                        <label for="zipview" class="col-form-label text-left w-full">ZIP</label>
+                                        <input type="text" class="form-control input-field-profile numbersonly" name="zipview" ng-model="zipview" alt="ZIP" maxlength="5" minlength="5"  placeholder="XXXXX" required="">
+                                    	<span class=" msg angErrmsg" ng-show="wallet.zipview.$touched && wallet.zipview.$invalid "> Required</span>
+                                     </div>
+                                     <div class="offset-8"></div>
+                                     <div class="col-md-2 m-t-15 sub-card">
+                                            <div class="profile-group input-group">
+                                            	<input type="button" value="CANCEL" class="profile-cancel-btn profile-close">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-2 m-t-15 sub-card">
+                                        <div class="profile-group input-group">
+                                        	<input type="submit" value="SAVE" class="profile-save-btn">
+                                      	</div>
+                                      </div>
+                                </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-12 profile-view">
+                    	<div class="row">
+                                	<div class="col-md-5 cardach-group">
+                                      	<label for="cdnameview" class="col-form-label">Name on Card</label>
+                                      	<div class="prof-text-fld">John Smith</div>
+                                    </div>
+                                	<div class="col-md-3 cardach-group">
+                                      	<label for="expdateview" class="col-form-label">Expiry Date</label>
+                                      	<div class="prof-text-fld">03/24</div>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                      <label for="secvview" class="col-form-label">Secure Code</label>
+                                      <div class="prof-text-fld">321</div>
+                                    </div>
+                                    <div class="col-md-5 cardach-group">
+                                      <label for="debitnumview" class="col-form-label">Card Number</label>
+                                      <div class="prof-text-fld">****** *** **1234</div>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                        <label for="zipview" class="col-form-label text-left w-full">ZIP</label>
+                                        <div class="prof-text-fld">12345</div>
+                                     </div>
+                                     <div class="offset-8"></div>
+                                     <div class="col-md-2 m-t-15 sub-card">
+                                            <div class="profile-group input-group">
+                                            	<input type="button" value="CLOSE" class="profile-cancel-btn profile-close">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-2 m-t-15 sub-card">
+                                        <div class="profile-group input-group">
+                                        	<input type="submit" value="EDIT" class="profile-save-btn profile-edit-but">
+                                      	</div>
+                                      </div>
+                                </div>
                     </div>
                 </div>
                 <div class="row wallet-details">
@@ -329,16 +425,96 @@
                             <div class="card-name">John Smith</div>
                         </div>
                     </div>
-                    <div class="col-5 col-sm-6">
+                    <div class="col-5 col-sm-6 hidedelete">
                     	<div class="wallet-def"><a class="default-sel default-blue" href="#">SET AS DEFAULT</a></div>
                     	<div class="wallet-list">
                         	<ul>
-                                <li><a href="#">VIEW</a></li>
-                                <li><a href="#">EDIT</a></li>
-                                <li><a class="text-danger" href="#">DELETE</a></li>
+                                <li><a class="profile-view-v" href="">VIEW</a></li>
+                                <li><a class="profile-edit-e" href="">EDIT</a></li>
+                                <li><a class="text-danger profile-delete" href="#">DELETE</a></li>
                             </ul>
                         </div>
                     </div>
+                    <div class="col-12 col-md-12 profile-edit" ng-controller="profilecontrol">
+                    	<div class="row">
+                                	<div class="col-md-5 cardach-group">
+                                      	<label for="cdnameview" class="col-form-label">Name on Card</label>
+                                      	<input type="text" class="form-control input-field-profile alphabetsonly" name="cdnameview" ng-model="cdnameview" value="John Smith" required>
+									 	<span class=" msg angErrmsg" ng-show="wallet.cdnameview.$touched && wallet.cdnameview.$invalid "> Required</span> 
+                                    </div>
+                                	<div class="col-md-3 cardach-group">
+                                      	<label for="expdateview" class="col-form-label">Expiry Date</label>
+                                      	<input type="text"  class="form-control input-field-profile expiryval valid" name="expdateview" value="02/23" ng-model="expdateview" maxlength="5" minlength="5"  placeholder="MM/YY" required>
+                                      	<span class=" msg angErrmsg" ng-show="(wallet.expdateview.$touched && !wallet.expdateview.$dirty && wallet.expdateview.$invalid) || (wallet.expdateview.$dirty && wallet.expdateview.$error.required)">Required</span>
+									   <span class=" msg angErrmsg" id="" style="display: none;">Enter a valid Date (MM/YY). </span>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                      <label for="secvview" class="col-form-label">Secure Code</label>
+                                      <input type="text" class="form-control input-field-profile numbersonly" name="secvview"  ng-model="secvview" maxlength="3" minlength="3" required>
+									  <span class=" msg angErrmsg" ng-show="wallet.secvview.$touched && wallet.secvview.$invalid "> Required</span>
+                                    </div>
+                                    <div class="col-md-5 cardach-group">
+                                      <label for="debitnumview" class="col-form-label">Card Number</label>
+                                      <input type="text" class="form-control input-field-profile numbersonly" maxlength="16" minlength="12" name="debitnumview" ng-model="debitnumview" required>
+									   <span class="msg angErrmsg" ng-show="(wallet.debitnumview.$touched && !wallet.debitnumview.$dirty && wallet.debitnumview.$invalid) || (wallet.debitnumview.$dirty && wallet.debitnumview.$error.required)">Required</span>
+				                      <span class="msg angErrmsg" ng-show="wallet.debitnumview.$dirty && wallet.debitnumview.$error.minlength" >Account number should contain max 12 -16</span>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                        <label for="zipview" class="col-form-label text-left w-full">ZIP</label>
+                                        <input type="text" class="form-control input-field-profile numbersonly" name="zipview" ng-model="zipview" alt="ZIP" maxlength="5" minlength="5"  placeholder="XXXXX" required="">
+                                    	<span class=" msg angErrmsg" ng-show="wallet.zipview.$touched && wallet.zipview.$invalid "> Required</span>
+                                     </div>
+                                     <div class="offset-8"></div>
+                                     <div class="col-md-2 m-t-15 sub-card">
+                                            <div class="profile-group input-group">
+                                            	<input type="button" value="CANCEL" class="profile-cancel-btn profile-close">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-2 m-t-15 sub-card">
+                                        <div class="profile-group input-group">
+                                        	<input type="submit" value="SAVE" class="profile-save-btn">
+                                      	</div>
+                                      </div>
+                                </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-12 profile-view">
+                    	<div class="row">
+                                	<div class="col-md-5 cardach-group">
+                                      	<label for="cdnameview" class="col-form-label">Name on Card</label>
+                                      	<div class="prof-text-fld">John Smith</div>
+                                    </div>
+                                	<div class="col-md-3 cardach-group">
+                                      	<label for="expdateview" class="col-form-label">Expiry Date</label>
+                                      	<div class="prof-text-fld">03/24</div>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                      <label for="secvview" class="col-form-label">Secure Code</label>
+                                      <div class="prof-text-fld">321</div>
+                                    </div>
+                                    <div class="col-md-5 cardach-group">
+                                      <label for="debitnumview" class="col-form-label">Card Number</label>
+                                      <div class="prof-text-fld">****** *** **1234</div>
+                                    </div>
+                                    <div class="col-md-3 cardach-group">
+                                        <label for="zipview" class="col-form-label text-left w-full">ZIP</label>
+                                        <div class="prof-text-fld">12345</div>
+                                     </div>
+                                     <div class="offset-8"></div>
+                                     <div class="col-md-2 m-t-15 sub-card">
+                                            <div class="profile-group input-group">
+                                            	<input type="button" value="CLOSE" class="profile-cancel-btn profile-close">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-2 m-t-15 sub-card">
+                                        <div class="profile-group input-group">
+                                        	<input type="submit" value="EDIT" class="profile-save-btn profile-edit-but">
+                                      	</div>
+                                      </div>
+                                </div>
+                    </div>
+                    
+                    
                 </div>
                 <div class="row wallet-details"  ng-controller="profilecontrol" style="border-bottom:none;">
                     <div class="col-12 col-md-12 m-t-20">
@@ -350,7 +526,6 @@
                         	<div class="col-sm-3  p-l-10 p-r-8">
                                     <div class="profile-group input-group">
                                     <select id="card-payment" class="form-control input-field-profile cardpay-select" name="cardpayment" required="">
-                                        
                                         <option value="20">ACH</option>
                                         <option value="28">CARD</option>
                                       </select>
@@ -369,8 +544,9 @@
                                     </div>
                                 	<div class="col-md-3 cardach-group">
                                       	<label for="expdate" class="col-form-label">Expiry Date</label>
-                                      	<input type="text"  class="form-control input-field-profile expiryval valid" name="expdate" ng-model="expdate" maxlength="5"  required>
-                                      	<span class=" msg angErrmsg" ng-show="wallet.expdate.$touched && wallet.expdate.$invalid "> Required</span>
+                                      	<input type="text"  class="form-control input-field-profile expiryval valid" name="expdate" ng-model="expdate" maxlength="5" minlength="5" placeholder="MM/YY" required>
+                                      	<span class=" msg angErrmsg" ng-show="(wallet.expdate.$touched && !wallet.expdate.$dirty && wallet.expdate.$invalid) ">Required</span>
+									   <span class=" msg angErrmsg" id="dateErr" ng-show="  wallet.expdate.$invalid" style="display: none;">Enter a valid Date (MM/YY). </span>
                                     </div>
                                     <div class="col-md-3 cardach-group">
                                       <label for="secvv" class="col-form-label">Secure Code</label>
@@ -380,15 +556,15 @@
                                     <div class="col-md-5 cardach-group">
                                       <label for="debitnum" class="col-form-label">Card Number</label>
                                       <input type="text" class="form-control input-field-profile numbersonly" maxlength="16" minlength="12" name="debitnum" ng-model="debitnum" required>
-									  <span class=" msg angErrmsg" ng-show="(wallet.debitnum.$touched && !wallet.debitnum.$dirty && wallet.debitnum.$invalid) || (wallet.debitnum.$dirty && wallet.debitnum.$error.required)">Required</span>
-				                      <span class=" msg angErrmsg" ng-show="wallet.debitnum.$dirty && wallet.debitnum.$error.minlength" >Card number must contain minimum 12 digits</span>
+									   <span class=" msg angErrmsg" ng-show="(wallet.debitnum.$touched && !wallet.debitnum.$dirty && wallet.debitnum.$invalid) || (wallet.debitnum.$dirty && wallet.debitnum.$error.required)">Required</span>
+				                      <span class=" msg angErrmsg" ng-show="wallet.debitnum.$dirty && wallet.debitnum.$error.minlength" >Account number should contain max 12 -16</span>
                                     </div>
                                     <div class="col-md-3 cardach-group">
                                         <label for="zip" class="col-form-label text-left w-full">ZIP</label>
                                         <input type="text" class="form-control input-field-profile numbersonly" name="zip" ng-model="zip" alt="ZIP" maxlength="5" placeholder="XXXXX" required="">
                                     	<span class=" msg angErrmsg" ng-show="wallet.zip.$touched && wallet.zip.$invalid "> Required</span>
                                      </div>
-                                     <div class=" offset-8"></div>
+                                     <div class="offset-8"></div>
                                      <div class="col-md-2 m-t-15 sub-card">
                                             <div class="profile-group input-group">
                                             	<input type="button" value="CANCEL" class="profile-cancel-btn">
@@ -462,6 +638,7 @@ var App = angular.module("profileApp", []);
           accountnum: "",  
          reaccountnum: ""  
       };  
+	
   });  
   App.directive("compareTo", function ()  
   {  
